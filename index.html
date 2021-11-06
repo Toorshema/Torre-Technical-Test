@@ -55,11 +55,12 @@
                 getData();
                 document.write("<br><br>");
                 document.write('<h1>',obj["user"]["name"] + "<br>",'</h1>');
+                
                 document.write('<h3>About me:</h3>');
                 document.write('<p>',obj["user"]["description"] + "<br>",'</p>');
+
                 document.write('<h3>Skills and interests:</h3>');
-                
-                document.write('<h4>',obj["user"]["skills"].join(' - ') + "<br>",'</h4>');
+                document.write('<h4>',obj["user"]["skills"].join(' <br><br> ') + "<br>",'</h4>');
                 
             </script>
     

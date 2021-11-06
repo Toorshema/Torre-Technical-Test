@@ -1,15 +1,25 @@
 [
 	{
-		"user": "Abraham Hernandez",
-		"skill": "Software development"
+		"user": {
+            "name":"Abraham Hernandez",
+        
+            "description": "This is a siple text about my description as developer, just ignore it. It´s a test."
+        }
 	},
 	{
-		"user": "Jorge Valdez",
-		"skill": "Software development" 
+		"master": {
+            
+            "skills": ["Software development", "Team Manegement", "Data Analysis", "Functional programming", "Reactive programming", "Python",
+                        "Javascript", "Unit Tsting"]
+        } 
 	},
 	{
-		"user": "Baruc Osorio",
-		"skill": "Software development"
+        "proficient": {
+            
+            "skills": ["Software development", "Team Manegement", "Data Analysis", "Functional programming", "Reactive programming", "Python",
+                        "Javascript", "Unit Tsting"]
+        }
+		
 	}
 	
 ]
