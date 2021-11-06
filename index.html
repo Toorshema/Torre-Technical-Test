@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href="./styles.css" rel="stylesheet" type="text/css">
+
 <head>
-    
+    <link href="./styles.css" rel="stylesheet" type="text/css">    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Test</title>
@@ -59,6 +59,7 @@
                 document.write('<p>',obj["user"]["description"] + "<br>",'</p>');
                 document.write('<h3>Skills and interests:</h3>');
                 
+                document.write('<h4>',obj["user"]["skills"].join(' - ') + "<br>",'</h4>');
                 
             </script>
     
