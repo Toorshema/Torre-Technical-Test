@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="./styles.css" rel="stylesheet" type="text/css">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Test</title>
+    <script src="https://kit.fontawesome.com/ef86fc5555.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="center">
+            <img src="https://static.tumblr.com/fsavqrf/VxHmwd2qx/setton.png" alt="user" width="220">
+            <script>
+    
+                var info = `{
+		            "user": {
+                        "name":"Abraham Hernandez",
+		                "skills": ["Software development", "Team Manegement"],
+                        "description": "This is a siple text about my description as developer, just ignore it. It´s a test."
+	                }
+                }`;
+                var obj = JSON.parse(info);
+                function printValues(obj) {
+                    for(var k in obj) {
+                        if(obj[k] instanceof Object) {
+                            printValues(obj[k]);
+                        } else {
+                            document.write(obj[k] + "<br>");
+                        };
+                    }
+                };
+
+        
+//-----------------------------------------------------------------------------------------------------------------------------
+    
+        
+                async function getData(url = 'https://bio.torre.co/api/bios/$username'){
+        
+                    const response = await fetch(url, { 
+                        method: 'POST',
+                        mode: 'cors',
+                        body: JSON.stringify(obj),
+                        headers: new Headers({
+                            'Content-Type': 'application/json'
+                        }),
+                        cache: 'default'
+                    }).then(response => response.json())
+                        .catch(error => console.error('error', error))
+                        .then(res => console.log('Success:', res));
+
+                }
+
+                getData();
+                document.write("<br><br>");
+                document.write('<h1>',obj["user"]["name"] + "<br>",'</h1>');
+                document.write('<h3>About me:</h3>');
+                document.write('<p>',obj["user"]["description"] + "<br>",'</p>');
+                document.write('<h3>Skills and interests:</h3>');
+                
+                
+            </script>
+    
+
+        </div>
+
+        
+        
+    </div>
+</body>
+</html>

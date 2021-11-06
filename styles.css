@@ -1,0 +1,29 @@
+body{
+    align-items: center;
+    width: 1080px;
+    text-align: center;
+    margin-left: auto;
+    margin-right:auto;
+    background-color: #3E4649;
+    font-family: Garamond;
+    
+}
+p{
+    font-size: 25px;
+    color: #E3EAEE;
+    text-align: justify;
+}
+h1{
+  
+    color: #D4DFE4;
+}
+h2{
+   
+    color: #E3EAEE;
+}
+h3{
+    
+    font-size: 30px;
+    color: #D7F308;
+    text-align: left;
+}
